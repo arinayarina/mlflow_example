@@ -1,8 +1,13 @@
 ```
+vagrant up
+vagrant ssh
+```
+Ставим нужные пакеты на виртуальную машину.
+```
 sudo apt install python3-pip
 sudo apt install gunicorn
 sudo pip3 install mlflow
-git clone https://github.com/mlflow/mlflow
+git clone https://github.com/mlflow/mlflow.git
 sudo mlflow server --host 192.168.33.11 
 ```
 Результат будет доступен по адресу 192.168.33.11:5000.
@@ -18,4 +23,3 @@ sudo python3 mlflow/examples/sklearn_elasticnet_wine/train.py
 sudo python3 mlflow/examples/sklearn_elasticnet_wine/train.py <alpha> <l1_ratio>
 sudo python3 example/main.py <test_size> <random_state>
 ```
-
